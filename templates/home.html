@@ -2,59 +2,44 @@
 <html>
 <head>
 <title>Usman's Careers</title>
-  <style>
-    body{
-      padding:0px;
-      margin:0px;
-    }
-    .container{
-      max-width:720px;
-      margin:auto;
-      
-    }
-    #cover-img{
-      width:100%;
-      height:320px;
-      object-fit:cover;
-      
-    }
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  .img-style{
+    height:360px;
+    width:100%;
     
- .main-heading{
-   text-align:center;
-   color:rgb(50,50,50);
-   font-family:Roboto;
-   text-decoration:underline;
-   font-weight:normal;
- }
-    h2{
-      text-align:center;
-      color:rgb(100,100,100);
-      font-family:Roboto;
-      font-weight:normal
-    }
-    .bodytext{
-      font-family:Roboto;
-      color:rgb(80,80,80)
-    }
+  
+  }
+</style>
+  
     
-    
-  </style>
 </head>
 <body >
-<div class ="container">
-<h1 class="main-heading">Usman's Careers</h1>
+<div class="container">
+<h1 class="text-center mt-2 mb-4" >{{company}}'s Careers</h1>
   
-  <img id="cover-img" src="https://usman-careers-website.usmankhan3304.repl.co/static/careers.jpg" >
-<h2 >About Usman khan</h2>
-  <p class="bodytext">
+  <img src="https://usman-careers-website.usmankhan3304.repl.co/static/careers.jpg"  class="img-style" class="img-fluid" >
+<h2 class="text-center mt-2">About Usman khan</h2>
+  <p class="lead" >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
-  <h2>Open Positions </h2>
-  <p bodytext>TOdo- show the jobs here!</p>
-  <div style="text-align:center">
-  <button>Contact Us</button>
+  <h2 class="text-center">Open Positions </h2>
+  
+  {%for st in data%}
+   
+  {% include 'item.html'%}
     
-  <p><Usman></Usman>CopyRight 2023, Usman </p>
+  {% endfor %}
+ 
+  <div class="text-center">
+  <button class="btn btn-primary">Contact Us</button>
+    
+  <p class="mt-2">CopyRight 2023, Usman </p>
     </div>
   </div>
 </body>
